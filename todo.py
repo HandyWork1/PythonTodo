@@ -26,10 +26,11 @@ if __name__ == "__main__":
         print("\n1. Add Todo")
         print("2. View Todos")
         print("3. Remove Todo")
-        print("4. Quit")
-        
+        print("4. Mark Complete")
+        print("5. Quit")
+
         choice = input("Enter your choice: ")
-        
+
         if choice == "1":
             item = input("Enter the task: ")
             add_todo(item)
@@ -39,6 +40,9 @@ if __name__ == "__main__":
             index = int(input("Enter the index to remove: "))
             remove_todo(index - 1)
         elif choice == "4":
+            index = int(input("Enter the index that has been completed: "))
+            mark_as_complete(index)
+        elif choice == "5":
             break
         else:
             print("Invalid choice!")
