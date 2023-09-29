@@ -15,6 +15,12 @@ def remove_todo(index):
     else:
         print("Invalid index!")
 
+def mark_as_complete(index):
+    if 0 <= index < len(todos):
+        todos[index]["complete"] = True
+    else:
+        print("Invalid index!")
+
 if __name__ == "__main__":
     while True:
         print("\n1. Add Todo")
